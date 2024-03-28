@@ -58,6 +58,11 @@ class FilamentFabricatorManager
         };
     }
 
+    public function registerCustomBlock(string $block): void 
+    {
+        $this->pageBlocks->put($block::getName(), $block);
+    }
+    
     /** @param  class-string  $layout */
     public function registerLayout(string $layout): void
     {
